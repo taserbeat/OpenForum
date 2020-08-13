@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  namespace :home, path: '' do
+    root 'top#index'
+  end
 end

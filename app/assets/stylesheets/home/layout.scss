@@ -1,4 +1,5 @@
 @import "colors";
+@import "dimensions";
 
 html,
 body {
@@ -12,6 +13,67 @@ div#wrapper {
   box-sizing: border-box;
   min-height: 100%;
   margin: 0 auto;
-  padding-bottom: 48px;
-  background-color: $dark_cyan;
+  padding-bottom: ($wide + $moderate) * 2 + $standard_line_height;
+  background-color: $white;
+}
+
+header {
+  background-color: $navy;
+
+  ul {
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+    li {
+      float: left;
+      font-weight: bold;
+      line-height: 100%;
+      border-right: $line solid $white;
+
+      a {
+        font-size: $large;
+        height: $very_wide * 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+        padding: 0 $very_wide * 2;
+      }
+
+      a.logo-mark {
+        padding: 0 $very_wide * 1.5;
+        font-size: $xlarge;
+        text-decoration: none;
+      }
+
+      a.menu {
+        text-decoration: none;
+        transition: .3s;
+      }
+
+      a.menu:hover {
+        background-color: $orange;
+      }
+    }
+
+    li:last-child {
+      border-right: none;
+    }
+  }
+}
+
+footer {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  background-color: $navy;
+  color: $white;
+
+  p {
+    text-align: center;
+    padding: $moderate;
+    margin: 0;
+  }
 }
